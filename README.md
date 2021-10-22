@@ -17,7 +17,7 @@ These steps are required for new Mattermost setups and don't include everything 
 
 ### 1. Cloning the repository (as an alternative please download it as archive)
 ```
-git clone https://github.com/mattermost/docker
+git clone https://github.com/jeanpereira/mattermost-docker-compose
 cd docker
 ```
 
@@ -32,10 +32,6 @@ Within the .env file make sure you edit at a minimum the below values. You can f
 ```
 ## This domain must be a live domain (FQDN) that points to the server where Mattermost is installed.
 DOMAIN=mm.example.com
-
-## This will be 'mattermost-enterprise-edition' or 'mattermost-team-edition' based on the version of Mattermost you're installing.
-MATTERMOST_IMAGE=mattermost-enterprise-edition
-MATTERMOST_IMAGE_TAG=5.36
 ```
 
 
