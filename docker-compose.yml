@@ -29,7 +29,7 @@ services:
     depends_on:
       - postgres
     container_name: mattermost
-    image: jeanpereira/${MATTERMOST_IMAGE}:${MATTERMOST_IMAGE_TAG}
+    image: ghcr.io/frenicohansen/${MATTERMOST_IMAGE}:${MATTERMOST_IMAGE_TAG}
     restart: ${RESTART_POLICY}
     security_opt:
       - no-new-privileges:true
@@ -43,6 +43,7 @@ services:
       - ${MATTERMOST_LOGS_PATH}:/mattermost/logs:rw
       - ${MATTERMOST_PLUGINS_PATH}:/mattermost/plugins:rw
       - ${MATTERMOST_CLIENT_PLUGINS_PATH}:/mattermost/client/plugins:rw
+      - ${MATTERMOST_BLEVE_INDEXES_PATH}:/mattermost/bleve-indexes:rw
     environment:
       # timezone inside container
       - TZ
